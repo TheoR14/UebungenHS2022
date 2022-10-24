@@ -13,13 +13,14 @@ class Timer extends Component { //toujours comme ça !
 
         // Event Handler registrieren
         this.decrease = this.decrease.bind(this);
-        this.buttonClicked = this.buttonClicked.bind(this)
-        this.updateValue = this.updateValue.bind(this)
+        this.buttonClicked = this.buttonClicked.bind(this);
+        this.updateValue = this.updateValue.bind(this);
+        this.resetClick = this.resetClick.bind(this);
 
     }
 
     buttonClicked(event){
-        this.setState({render: !this.state.render}) //quand le bouton est cliquer, la zone de texte doit disparaitre
+        this.setState({render: false}) //quand le bouton est cliquer, la zone de texte doit disparaitre
 
         this.setState({count: this.state.count, end: ''});
         if(this.interval != null){                      
@@ -41,20 +42,27 @@ class Timer extends Component { //toujours comme ça !
 
             }
     }
-   updateValue(event) {
+    updateValue(event) {
        this.setState({count: event.target.value});}
+
+    resetClick(){
+        this.setState({render: true});
+        this.setState({count:''});                  
+            clearInterval(this.interval);            
+            this.interval = null;
+    }
 
     
     render() { //gibt ein Titel, ein Timer(mit Zahlen) und schreibt Fertig wenn es fertig ist.
         return (
-        <>
+        <>            
             {this.state.render &&
             <Grid container>
                 <Grid style={{margin: 20}}>
                     <TextField value={this.state.count}
                     onChange={this.updateValue}
                     label="Sekunden" 
-                    variant='filled' 
+                    variant='filled'
                     color='warning'
                     inputProps={{ type: 'number'}}>
                     </TextField>
@@ -62,12 +70,17 @@ class Timer extends Component { //toujours comme ça !
             </Grid>
             }
 
-
             <Button onClick={this.buttonClicked}
             variant='contained'
             color='warning'
             style={{margin: 20}}>
                 Start
+            </Button>
+            <Button onClick={this.resetClick}
+            variant='contained'
+            color='warning'
+            style={{margin: 0}}>
+                Reset
             </Button>
 
             <div>
@@ -75,7 +88,7 @@ class Timer extends Component { //toujours comme ça !
                 <h1 style={{margin: 20, color: '#FF6600'}}>{this.state.end}</h1>
             </div>
 
-        </>);
+    </>);
     }
 
 }
