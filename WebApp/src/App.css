@@ -1,0 +1,259 @@
+.body{
+  display: block;
+  position: relative;
+  overflow: hidden;
+  zoom:95%;
+  height: 1250px;
+}
+
+.body::after {
+  content: "";
+  background-image: url("https://www.astro.uni-jena.de/Teaching/Praktikum/pra2002/A01_3.jpg");
+  opacity: 0.45;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+}
+
+.appbar {
+  height: 100px;
+  padding: auto;
+  text-align: center;
+  justify-content: center;
+  font-size: xx-large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown {
+  position: relative;
+}
+
+
+.wrapper {
+height: 20px;
+margin-top: 50px;
+margin-left:275px;
+margin-right:auto;
+width: 800px;
+align-items: center;
+display: flex;
+align-items: center;
+
+}
+  
+  .menu {
+    list-style-type: none;
+    margin: 5px 0;
+    margin-left:-5px;
+    padding: 0;
+    height: 40px;
+    width: 250px;  
+  }
+
+  
+  .menu > li {
+    height: 40px;
+    margin-left:275px;
+    margin-right:auto;
+    width: inherit;
+    background-color: white;
+  }
+  
+  .menu > li:hover {
+    background-color: lightgray;
+  }
+  
+  .menu > li > button {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+  
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 5px;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .menu-item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    width: 250px;
+  }
+
+  .menu-item-top {
+    margin-top: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+  }
+
+  .main {
+    display: flex;
+    height: 550px;
+    width: 800px;
+    margin: auto;
+    margin-top: 220px;
+    margin-bottom: 220px;
+    padding-top: 50px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid black;
+    
+  }
+
+  .field_one {
+    margin-bottom: 10px;
+    margin-left: 150px;
+  }
+  
+  .field_two {
+    margin-top: 30px;
+    margin-left: 150px;
+  }
+  
+  .output_one { 
+    margin-top: 10px;
+    margin-left: -635px;
+    margin-right: auto;  
+  }
+
+  .output_two { 
+    margin-top: 30px;
+    margin-left: -635px;
+    margin-right: auto;  
+  }
+
+.footer_nav {
+  list-style: none;
+  display: flex;
+  width: 940px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.footer_li {
+  margin-bottom: 10px;
+}
+
+.li-button {
+  display: block;
+  width: 200px;
+  height: 30px;
+  float: left;
+  margin-right:5px;
+  margin-bottom: 25px;
+  border:none;
+  background-color: black;
+  color: peachpuff;
+  border-radius: 2px;
+}
+
+
+.li-button:hover {
+  background-color: peachpuff;
+  color: black;
+}
+
+#MUItoCSS {
+  width: 250px;
+  height: 40px;
+  text-decoration: none;
+  background-color: black;
+  color: peachpuff;
+  border: none;
+  border-radius: 4px;
+  font-size: larger;
+  font-weight: 500;
+}
+
+#MUItoCSS:hover {
+  background-color: peachpuff;
+  color:black;
+}
+
+
+.styleB:hover {
+  color: white;
+}
+
+/* ########################################################## */
+
+.tooltip {
+  display: grid;
+  width: 500px;
+  height: 200px;
+  margin-left: 500px;
+  margin-bottom: -180px;
+  padding:auto;
+  justify-content: right;
+}
+
+.trigger {
+  border: none;
+  background-color: white;
+  width: 300px;
+}
+
+.text {
+  background-color: peachpuff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 1px black;
+  height: 80px;
+  width: 300px;
+  text-align: left;
+  vertical-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Names {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+
+#Appbar2 {
+  position:absolute;
+  height: 90px;
+  width: 100%;
+  justify-content: center;
+  background-color: lightgrey;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.error {
+  display: flex;
+  width: 805px;
+  margin-left: 368px;
+  color: rgb(247, 63, 63);
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.pizza-tim {
+  display: flex;
+  width: 200px;
+  margin-bottom: 10px;
+  margin-left: 155px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+.pizza-tim2 {
+  display: flex;
+  width: 200px;
+  margin-left: -630px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+

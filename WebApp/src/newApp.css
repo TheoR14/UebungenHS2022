@@ -1,0 +1,18 @@
+.hallo{
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hallo::after {
+    content: "";
+    background-image: url("https://www.astro.uni-jena.de/Teaching/Praktikum/pra2002/A01_3.jpg");
+    opacity: 0.45;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+  }
+

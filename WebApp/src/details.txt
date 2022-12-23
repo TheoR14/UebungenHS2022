@@ -1,0 +1,8 @@
+Erweiterungen:
+
+- Mit State Ausgabe, um welches Koordinatenformat es sich handelt über den Textfeldern, damit die Transformation abgelesen werden kann.
+- Linien und CSV-File Transformation
+- Darstellung in Leaflet
+- Geomatik Umrechner Verknüpfen
+
+- Conditional Tooltip
